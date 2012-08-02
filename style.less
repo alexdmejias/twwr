@@ -12,6 +12,55 @@ License URI:
 
 */
 
-@import 'CSS/normalize.less';
-@import 'CSS/variables.less';
+@import 'CSS/normalize';
 
+////////////////////////////VARIABLES//////////////////////////////////////
+@light-blue: #4F8CCC;
+@r:#FF091B;
+@g:#009900;
+@dark-g:#065506;
+////////////////////////////GLOBALS//////////////////////////////////////
+body{background:#fff}
+ul{
+	list-style-type:none;
+}
+h1,h2,h3,h4,h5,h6,p,span,li,a{
+	font-family:Verdana,Geneva,Helvetiva,sans-serif;
+}
+p,span{
+	font-size:12px;
+	line-height:150%;
+}
+.r{color:@r}
+.g{color:@g}
+
+
+////////////////////////////FRONT PAGE//////////////////////////////////////
+////////////////////////////FRONT PAGE//////////////////////////////////////
+////////////////////////////FRONT PAGE//////////////////////////////////////
+body.blue-bg{
+	background:@light-blue;
+}
+section #front-page{
+	width: 800px;
+	margin:0 auto;
+}
+////////////////////////////END FRONT PAGE//////////////////////////////////////
+
+////////////////////////////OTHER PAGES//////////////////////////////////////
+#page{
+	h1{
+		&:hover{
+			color:@r;
+		}
+	}
+	h2{
+		color:@dark-g;
+	}
+	nav{
+
+	}
+	section{
+		width:650px;
+	}
+}

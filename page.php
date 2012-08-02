@@ -1,12 +1,13 @@
 <?php get_header(); ?>
-<body>
+<body id="page">
 	<?php get_sidebar(); ?>
-	<div id="content">
+	<section>
 		<?php if(have_posts()): ?>
-		<?php while(have_posts()):the_post(); ?>
-			<?php the_content(''); ?>
-		<?php endwhile; ?>
-	<?php endif; ?>
+			<?php while(have_posts()):the_post(); ?>
+				<?php the_content(''); ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
+	</section>
 
 
 </body>
