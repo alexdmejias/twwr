@@ -12,7 +12,8 @@ License URI:
 
 */
 
-@import 'CSS/normalize';
+// @import 'CSS/normalize';
+@import 'CSS/bootstrap';
 
 ////////////////////////////VARIABLES//////////////////////////////////////
 @light-blue: #4F8CCC;
@@ -25,15 +26,15 @@ ul{
 	list-style-type:none;
 }
 h1,h2,h3,h4,h5,h6,p,span,li,a{
-	font-family:Verdana,Geneva,Helvetiva,sans-serif;
+	font-family:Verdana,Geneva,Helvetica;
 }
-p,span{
+p{
 	font-size:12px;
 	line-height:150%;
 }
 .r{color:@r}
 .g{color:@g}
-
+a{text-decoration:none}
 
 ////////////////////////////FRONT PAGE//////////////////////////////////////
 ////////////////////////////FRONT PAGE//////////////////////////////////////
@@ -50,6 +51,7 @@ section #front-page{
 ////////////////////////////OTHER PAGES//////////////////////////////////////
 #page{
 	h1{
+
 		&:hover{
 			color:@r;
 		}
@@ -57,10 +59,104 @@ section #front-page{
 	h2{
 		color:@dark-g;
 	}
-	nav{
+	.container{
+		.header{
+			background: url('IMG/secondheader2.jpg') repeat-y;
+			height:120px;
+		}
+		.poleTop{
+			background: url('IMG/poletop.jpg') repeat-y;
+			height:30px;
+			h3{
+				font-size: 18px;
+				color:rgb(102,102,102);
+				margin:0 0 0 158px;
+			}
+		}
+		#content{
+			background: url('IMG/columnbg.jpg') repeat-y;
+			padding-top: 0px;
+			.sidebar{
+				text-align: right;
+				text-transform: uppercase;
+				a{
+					color:#333;
+					background-color: rgb(153,153,153);
+					font-weight: bold;
+					padding:0 2px;
+					&:hover{
+						color:#FF0000;
+					}
+					&:visited{
+						color:#000;
+					}
 
+				}
+				ul{
+					padding: 0 40px 0 0;
+				}
+				li{
+					margin-bottom:5px;
+				}
+				ul.children{
+					padding:0;
+					margin:5px 0 20px 0;
+					li{
+						text-transform: none;
+						font-size:11px;
+						margin-bottom: 0;
+					}
+				}
+			}//end .sidebar
+			.cont{
+				padding-top: 10px;
+				h1{
+					margin:0 0 10px 0;
+				}
+				h2{
+					margin:0 0 10px;
+				}
+
+			}
+		}//end #content
+	}// end .container
+	.footer{
+		font-size: 9px;
+		border-top:3px solid #000;
+		.footer_nav,.copyright{
+			border-bottom:2px solid #ccc;
+		}
+
+		.footer_nav{
+			padding-bottom: 2px;
+			ul{
+				list-style-type: none;
+				padding:0;
+				margin:5px 0;
+				li{
+					display: inline;
+					float: left;
+					border-left:1px solid #000;
+					// font-size: 9px;
+					text-transform: uppercase;
+					font-weight: bold;
+					&:first-child{
+						border:0;
+						padding-left:0;
+					}
+					a,a:visited{
+						color:#000;
+						padding:0 5px;
+					}
+				}
+			}
+		}
+		.copyright{
+			p{
+				font-size: 9px;
+				padding:0;
+				margin:2px 0 3px 3px;
+			}
+		}
 	}
-	section{
-		width:650px;
-	}
-}
+}// end #page

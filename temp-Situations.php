@@ -1,3 +1,10 @@
+<?php
+/**
+ * Template Name: Situations
+ *
+ * Shows all the situations
+ */
+?>
 <?php get_header(); ?>
 			<div class="row">
 				<div id="content" class="span40">
