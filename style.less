@@ -35,23 +35,19 @@ p{
 .r{color:@r}
 .g{color:@g}
 a{text-decoration:none}
+a:hover{color:@r}
 
 ////////////////////////////FRONT PAGE//////////////////////////////////////
 ////////////////////////////FRONT PAGE//////////////////////////////////////
 ////////////////////////////FRONT PAGE//////////////////////////////////////
-body.blue-bg{
+.home{
 	background:@light-blue;
-}
-section #front-page{
-	width: 800px;
-	margin:0 auto;
 }
 ////////////////////////////END FRONT PAGE//////////////////////////////////////
 
 ////////////////////////////OTHER PAGES//////////////////////////////////////
-#page{
+.page{
 	h1{
-
 		&:hover{
 			color:@r;
 		}
@@ -108,13 +104,17 @@ section #front-page{
 					}
 				}
 			}//end .sidebar
-			.cont{
+			.main{
 				padding-top: 10px;
 				h1{
 					margin:0 0 10px 0;
 				}
 				h2{
 					margin:0 0 10px;
+				}
+				.situations_list{
+					-moz-column-count:2;
+					width:350px;
 				}
 
 			}

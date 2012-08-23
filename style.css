@@ -279,107 +279,110 @@ p {
 a {
   text-decoration: none;
 }
-body.blue-bg {
-  background: #4f8ccc;
-}
-section #front-page {
-  width: 800px;
-  margin: 0 auto;
-}
-#page h1:hover {
+a:hover {
   color: #ff091b;
 }
-#page h2 {
+.home {
+  background: #4f8ccc;
+}
+.page h1:hover {
+  color: #ff091b;
+}
+.page h2 {
   color: #065506;
 }
-#page .container .header {
+.page .container .header {
   background: url('IMG/secondheader2.jpg') repeat-y;
   height: 120px;
 }
-#page .container .poleTop {
+.page .container .poleTop {
   background: url('IMG/poletop.jpg') repeat-y;
   height: 30px;
 }
-#page .container .poleTop h3 {
+.page .container .poleTop h3 {
   font-size: 18px;
   color: #666666;
   margin: 0 0 0 158px;
 }
-#page .container #content {
+.page .container #content {
   background: url('IMG/columnbg.jpg') repeat-y;
   padding-top: 0px;
 }
-#page .container #content .sidebar {
+.page .container #content .sidebar {
   text-align: right;
   text-transform: uppercase;
 }
-#page .container #content .sidebar a {
+.page .container #content .sidebar a {
   color: #333;
   background-color: #999999;
   font-weight: bold;
   padding: 0 2px;
 }
-#page .container #content .sidebar a:hover {
+.page .container #content .sidebar a:hover {
   color: #FF0000;
 }
-#page .container #content .sidebar a:visited {
+.page .container #content .sidebar a:visited {
   color: #000;
 }
-#page .container #content .sidebar ul {
+.page .container #content .sidebar ul {
   padding: 0 40px 0 0;
 }
-#page .container #content .sidebar li {
+.page .container #content .sidebar li {
   margin-bottom: 5px;
 }
-#page .container #content .sidebar ul.children {
+.page .container #content .sidebar ul.children {
   padding: 0;
   margin: 5px 0 20px 0;
 }
-#page .container #content .sidebar ul.children li {
+.page .container #content .sidebar ul.children li {
   text-transform: none;
   font-size: 11px;
   margin-bottom: 0;
 }
-#page .container #content .cont {
+.page .container #content .main {
   padding-top: 10px;
 }
-#page .container #content .cont h1 {
+.page .container #content .main h1 {
   margin: 0 0 10px 0;
 }
-#page .container #content .cont h2 {
+.page .container #content .main h2 {
   margin: 0 0 10px;
 }
-#page .footer {
+.page .container #content .main .situations_list {
+  -moz-column-count: 2;
+  width: 350px;
+}
+.page .footer {
   font-size: 9px;
   border-top: 3px solid #000;
 }
-#page .footer .footer_nav, #page .footer .copyright {
+.page .footer .footer_nav, .page .footer .copyright {
   border-bottom: 2px solid #ccc;
 }
-#page .footer .footer_nav {
+.page .footer .footer_nav {
   padding-bottom: 2px;
 }
-#page .footer .footer_nav ul {
+.page .footer .footer_nav ul {
   list-style-type: none;
   padding: 0;
   margin: 5px 0;
 }
-#page .footer .footer_nav ul li {
+.page .footer .footer_nav ul li {
   display: inline;
   float: left;
   border-left: 1px solid #000;
   text-transform: uppercase;
   font-weight: bold;
 }
-#page .footer .footer_nav ul li:first-child {
+.page .footer .footer_nav ul li:first-child {
   border: 0;
   padding-left: 0;
 }
-#page .footer .footer_nav ul li a, #page .footer .footer_nav ul li a:visited {
+.page .footer .footer_nav ul li a, .page .footer .footer_nav ul li a:visited {
   color: #000;
   padding: 0 5px;
 }
-#page .footer .copyright p {
+.page .footer .copyright p {
   font-size: 9px;
   padding: 0;
   margin: 2px 0 3px 3px;
