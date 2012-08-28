@@ -403,3 +403,24 @@ ul.situations_list {
 ul.situations_list li {
   font-weight: bold;
 }
+ul.categories_list {
+  padding: 0;
+}
+ul.categories_list ul {
+  padding: 0;
+  margin-bottom: 15px;
+}
+ul.categories_list ul li {
+  font-size: 12px;
+}
+ul.categories_list ul li a {
+  padding-left: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+ul.categories_list ul li.comment_count {
+  margin-left: -12px;
+}
+.wrong {
+  font-size: 55px;
+}

@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Situations
+ * Template Name: Situations-Categories
  *
- * Shows all the situations
+ * Shows all the categories within all the situations
  */
 ?>
 <?php get_header(); ?>
@@ -24,7 +24,7 @@
 							<?php while(have_posts()):the_post(); ?>
 								<?php
 									the_content('');
-									//the list of situations comes from functions.php
+									//the list of categories come from functions.php
 								?>
 							<?php endwhile; ?>
 						<?php endif; ?>
