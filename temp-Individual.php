@@ -22,6 +22,7 @@
 					<div class="main span32 situation">
 						<?php if(have_posts()): ?>
 							<?php while(have_posts()):the_post(); ?>
+								<?php echo '<h1>'. get_the_title($post->post_parent).'</h1>'; ?>
 								<?php the_title('<h2>','</h2>'); ?>
 								<?php the_content(''); ?>
 								<div class="comments">

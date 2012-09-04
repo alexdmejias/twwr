@@ -25,7 +25,7 @@ body{background:#fff}
 ul{
 	list-style-type:none;
 }
-h1,h2,h3,h4,h5,h6,p,span,li,a{
+h1,h2,h3,h4,h5,h6,p,span,li,a,legend{
 	font-family:Verdana,Geneva,Helvetica;
 }
 p{
@@ -145,8 +145,43 @@ a:hover{color:@r}
 			}//end .situation
 			.comments{
 				h3{
-					border-bottom:1px solid #000;
+					border-bottom: solid 1px #000;
 				}
+				.commentlist{
+					padding-left: 0;
+					li{
+						margin-top:15px;
+					}
+					p,cite{
+						font-size: 16px;
+						margin:3px 0;
+					}
+				}
+				fieldset{
+					border-radius: 10px;
+					margin-bottom: 15px;
+				}
+				legend{
+					font-style: 20px;
+					font-weight: bold;
+					color:#333;
+				}
+				#reply-title{
+					display:none;
+				}
+				label{
+					font-weight: bold;
+				}
+				input,textarea{
+					width:500px;
+					border-radius: 5px;
+					border:1px solid #333;
+				}
+				input[type="submit"]{
+					width:100px;
+					border:0;
+				}
+
 			}
 		}//end #content
 	}// end .container

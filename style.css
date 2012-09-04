@@ -263,7 +263,8 @@ h6,
 p,
 span,
 li,
-a {
+a,
+legend {
   font-family: Verdana,Geneva,Helvetica;
 }
 p {
@@ -390,7 +391,47 @@ a:hover {
   color: #009900;
 }
 .page-template .container #content .comments h3, .page-template-default .container #content .comments h3 {
-  border-bottom: 1px solid #000;
+  border-bottom: solid 1px #000;
+}
+.page-template .container #content .comments .commentlist, .page-template-default .container #content .comments .commentlist {
+  padding-left: 0;
+}
+.page-template .container #content .comments .commentlist li, .page-template-default .container #content .comments .commentlist li {
+  margin-top: 15px;
+}
+.page-template .container #content .comments .commentlist p,
+.page-template-default .container #content .comments .commentlist p,
+.page-template .container #content .comments .commentlist cite,
+.page-template-default .container #content .comments .commentlist cite {
+  font-size: 16px;
+  margin: 3px 0;
+}
+.page-template .container #content .comments fieldset, .page-template-default .container #content .comments fieldset {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.page-template .container #content .comments legend, .page-template-default .container #content .comments legend {
+  font-style: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.page-template .container #content .comments #reply-title, .page-template-default .container #content .comments #reply-title {
+  display: none;
+}
+.page-template .container #content .comments label, .page-template-default .container #content .comments label {
+  font-weight: bold;
+}
+.page-template .container #content .comments input,
+.page-template-default .container #content .comments input,
+.page-template .container #content .comments textarea,
+.page-template-default .container #content .comments textarea {
+  width: 500px;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+.page-template .container #content .comments input[type="submit"], .page-template-default .container #content .comments input[type="submit"] {
+  width: 100px;
+  border: 0;
 }
 .page-template .footer, .page-template-default .footer {
   font-size: 9px;
