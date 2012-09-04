@@ -113,7 +113,40 @@ a:hover{color:@r}
 					-moz-column-count:2;
 					width:350px;
 				}
-
+			}//end .main
+			.situation{
+				h2{
+					color:#000;
+					background:#FFCC00;
+					font-size: 18px;
+					margin:0;
+					padding:7px 10px;
+				}
+				.wrong,.right{
+					padding:10px;
+					border:solid 5px @r;
+					span{
+						font-weight:bold;
+						margin-right:10px;
+						color:@r;
+						display: inline;
+					}
+					p{
+						display: inline;
+						font-size: 14px;
+					}
+				}
+				.right{
+					border-color:@g;
+					span{
+						color:@g;
+					}
+				}
+			}//end .situation
+			.comments{
+				h3{
+					border-bottom:1px solid #000;
+				}
 			}
 		}//end #content
 	}// end .container
@@ -164,6 +197,15 @@ a:hover{color:@r}
 ////////////////////////////FRONT PAGE//////////////////////////////////////
 .home{
 	background:@light-blue;
+	#front-page{
+		.text{
+			width: 350px;
+			float:right;
+		}
+	}
+	.footer{
+		border:0;
+	}
 }
 
 ////////////////////////////SITUATIONS LIST//////////////////////////////////////
@@ -195,8 +237,4 @@ ul.categories_list{
 			margin-left:-12px;
 		}
 	}
-}
-
-.wrong{
-	font-size: 55px;
 }
