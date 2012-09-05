@@ -118,12 +118,11 @@ function change_comment_form_defaults($default) {
 
 
 	$fields =  array(
-		'author' => '<p class="comment-form-author">' .
-					'<label for="author">' . 'Name [your name, class, group or organization]' . '</label> ' . ( $req ? '<span class="required">*:</span>' : ':' ) .
+		'author' => '<p class="comment-form-author"><label for="author">' . 'Name [your name, class, group or organization]' . '</label> ' . ( $req ? '<span class="required">*:</span>' : ':' ) .
 		            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
 		'email'  => '<p class="comment-form-email"><label for="email">' . 'Email Address [for notification only, NEVER printed on the site]'. '</label> ' . ( $req ? '<span class="required">*:</span>' : ':' ) .
 		            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
-		'location'  => '<p class="comment-form-location"><label for="location">' .'Location [City and State]:'. '</label> '. ( $req ? '<span class="required">*:</span>' : ':' ) .
+		'location'  => '<p class="comment-form-location"><label for="location">' .'Location [City and State]:'. '</label> '.
 		            '<input id="location" name="location" type="text" size="30"' . ' /></p>',
 	);
 

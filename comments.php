@@ -33,9 +33,12 @@
 
 <?php if ( comments_open() ) : ?>
 <?php //comment form is in functions.php ?>
+<?php echo '<form>'; ?>
 <?php echo '<fieldset class="span26"><legend>Comments Form</legend>'; ?>
 <?php comment_form();?>
 <?php echo '</fieldset>'; ?>
+<?php do_action('comment_form', $post->ID); ?>
+<?php echo '</form>'; ?>
 <?php endif; ?>
 
 
