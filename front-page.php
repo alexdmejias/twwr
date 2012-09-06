@@ -7,7 +7,7 @@
 				<div class="row">
 					<div class="span22 left">
 						<ul>
-							<?php wp_list_pages('depth=1&sort_column=menu_order&title_li=');?>
+							<?php wp_list_pages('exclude=13&depth=1&sort_column=menu_order&title_li=');?>
 						</ul>
 					</div>
 					<div class="text span18">

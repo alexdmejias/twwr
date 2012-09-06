@@ -520,12 +520,15 @@ a:hover {
 .home #front-page .left li {
   background: url('IMG/empty-sign.png') no-repeat 96% center;
   margin: 10px;
-  padding: 11px;
+  padding: 6px;
 }
 .home #front-page .left a {
   font-size: 22px;
   font-weight: bold;
   text-shadow: #333 0px 0px 1px;
+}
+.home #front-page .left a:hover {
+  color: #000;
 }
 .home .footer {
   border: 0;
