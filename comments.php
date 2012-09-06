@@ -1,5 +1,4 @@
 <?php
-
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 		die ('Please do not load this page directly. Thanks!');
 
@@ -33,12 +32,15 @@
 
 <?php if ( comments_open() ) : ?>
 <?php //comment form is in functions.php ?>
-<?php echo '<form>'; ?>
-<?php echo '<fieldset class="span26"><legend>Comments Form</legend>'; ?>
-<?php comment_form();?>
-<?php echo '</fieldset>'; ?>
-<?php do_action('comment_form', $post->ID); ?>
-<?php echo '</form>'; ?>
+<?php 
+	echo '<form>'.
+		'<fieldset class="span26"><legend>Comments Form</legend>';
+	comment_form();
+	echo '</fieldset>';
+	// commented out until i find out what it means
+	// do_action('comment_form', $post->ID);
+	echo '</form>';
+?>
 <?php endif; ?>
 
 

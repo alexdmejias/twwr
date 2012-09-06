@@ -1,3 +1,4 @@
+<?php wp_footer();?>
 		<div class="row footer">
 			<div class="footer_nav span32 offset8">
 				<ul>

@@ -1,11 +1,14 @@
 <?php
 
 // HIDE THE ADMIN BAR
-function my_function_admin_bar(){
-	return false;
-}
-add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+// function my_function_admin_bar(){
+// 	return false;
+// }
+// add_filter( 'show_admin_bar' , 'my_function_admin_bar');
 
+if ( is_admin() ) {
+	show_admin_bar(true);
+}
 
 //lsit situations for /situations page
 function list_situations_func(){
@@ -136,6 +139,8 @@ function change_comment_form_defaults($default) {
 		'title_reply'=>'',
 		'title_reply_to'=>'',
 		'cancel_reply_link'=>'',
+		'id_submit'=>'submit',
+		'id_form'=>'commentform',
 
 	);
 
@@ -148,6 +153,8 @@ add_action( 'comment_post',	'save_comment_meta_data' );
 function save_comment_meta_data( $comment_id ) {
 	add_comment_meta( $comment_id, 'location', $_POST['location'] );
 }
+
+
 
 //TODO: add meta box to admin page
 // tut is here http://wp.tutsplus.com/tutorials/plugins/how-to-create-custom-wordpress-writemeta-boxes/
