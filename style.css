@@ -514,13 +514,18 @@ a:hover {
   background: #548acc url('IMG/pole.jpg') repeat-y 96% center;
 }
 .home #front-page .left ul {
-  padding-left: 123px;
+  padding-left: 112px;
   text-align: center;
 }
 .home #front-page .left li {
   background: #ffffff url('IMG/empty-sign.png') no-repeat 96% center;
   margin: 10px;
   padding: 11px;
+}
+.home #front-page .left a {
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: #333 0px 0px 1px;
 }
 .home .footer {
   border: 0;
