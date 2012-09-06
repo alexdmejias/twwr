@@ -3,7 +3,7 @@
             init : function(ed, url) {
                 ed.addButton('wrong', {
                     title : 'Add a wrong',
-                    //image : url+'/image.png',
+                    image : url+'/IMG/wrong.jpg',
                     onclick : function() {
                          ed.selection.setContent('[wrong]' + ed.selection.getContent() + '[/wrong]');
 
@@ -11,7 +11,7 @@
                 });
                 ed.addButton('right', {
                     title : 'Add a right',
-                    //image : url+'/image.png',
+                    image : url+'/IMG/right.jpg',
                     onclick : function() {
                          ed.selection.setContent('[right]' + ed.selection.getContent() + '[/right]');
 

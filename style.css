@@ -510,9 +510,17 @@ a:hover {
 .home {
   background: #548acc;
 }
-.home #front-page .text {
-  width: 350px;
-  float: right;
+.home #front-page .left {
+  background: #548acc url('IMG/pole.jpg') repeat-y 96% center;
+}
+.home #front-page .left ul {
+  padding-left: 123px;
+  text-align: center;
+}
+.home #front-page .left li {
+  background: #ffffff url('IMG/empty-sign.png') no-repeat 96% center;
+  margin: 10px;
+  padding: 11px;
 }
 .home .footer {
   border: 0;
