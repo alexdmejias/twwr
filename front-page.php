@@ -3,7 +3,7 @@
 	<div class="container" id="front-page">
 		<div class="row">
 			<section class="span40">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/IMG/home-header-bigblue2.jpg" />
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/IMG/home-header-bigblue2.jpg" />
 				<div class="row">
 					<div class="span22 left">
 						<ul>

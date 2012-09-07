@@ -16,7 +16,7 @@
 						<?php if(have_posts()): ?>
 							<?php while(have_posts()):the_post(); ?>
 								<?php the_content(''); ?>
-								<?php echo 'this is the index page';?>
+								<p>It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help.</p>
 							<?php endwhile; ?>
 						<?php endif; ?>
 					</div><!-- end .cont -->

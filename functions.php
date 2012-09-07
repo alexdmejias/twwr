@@ -74,8 +74,10 @@ function register_button($buttons) {
 
 //add the plugin to tinyMCE
 function add_plugin($plugin_array) {
-   $plugin_array['wrong'] = get_bloginfo('template_url').'/customcodes.js';
-   $plugin_array['right'] = get_bloginfo('template_url').'/customcodes.js';
+   $plugin_array['wrong'] = get_template_directory_uri().'/customcodes.js';
+   // $plugin_array['wrong'] = get_bloginfo('template_url').'/customcodes.js';
+   // $plugin_array['right'] = get_bloginfo('template_url').'/customcodes.js';
+   $plugin_array['right'] = get_template_directory_uri().'/customcodes.js';
    return $plugin_array;
 }
 

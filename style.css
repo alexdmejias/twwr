@@ -320,223 +320,176 @@ html, body {
   margin: 0;
   height: 100%;
 }
-.page-template h1:hover, .page-template-default h1:hover {
+h1:hover {
   color: #ff091b;
 }
-.page-template h2, .page-template-default h2 {
+h2 {
   color: #065506;
 }
-.page-template .container .header, .page-template-default .container .header {
+.container .header {
   background: url('IMG/secondheader2.jpg') repeat-y;
   height: 120px;
 }
-.page-template .container .poleTop, .page-template-default .container .poleTop {
+.container .poleTop {
   background: url('IMG/poletop.jpg') repeat-y;
   height: 30px;
 }
-.page-template .container .poleTop h3, .page-template-default .container .poleTop h3 {
+.container .poleTop h3 {
   font-size: 18px;
   color: #666666;
   margin: 0 0 0 158px;
 }
-.page-template .container #content, .page-template-default .container #content {
+.container #content {
   background: url('IMG/columnbg.jpg') repeat-y;
   padding-top: 0px;
 }
-.page-template .container #content .sidebar, .page-template-default .container #content .sidebar {
+.container #content .sidebar {
   text-align: right;
   text-transform: uppercase;
 }
-.page-template .container #content .sidebar a, .page-template-default .container #content .sidebar a {
+.container #content .sidebar a {
   color: #333;
   background-color: #999999;
   font-weight: bold;
   padding: 0 2px;
 }
-.page-template .container #content .sidebar a:hover, .page-template-default .container #content .sidebar a:hover {
+.container #content .sidebar a:hover {
   color: #FF0000;
 }
-.page-template .container #content .sidebar a:visited, .page-template-default .container #content .sidebar a:visited {
+.container #content .sidebar a:visited {
   color: #000;
 }
-.page-template .container #content .sidebar ul, .page-template-default .container #content .sidebar ul {
+.container #content .sidebar ul {
   padding: 0 40px 0 0;
 }
-.page-template .container #content .sidebar li, .page-template-default .container #content .sidebar li {
+.container #content .sidebar li {
   margin-bottom: 5px;
   font-size: 14px;
 }
-.page-template .container #content .sidebar ul.children, .page-template-default .container #content .sidebar ul.children {
+.container #content .sidebar ul.children {
   padding: 0;
   margin: 5px 0 20px 0;
 }
-.page-template .container #content .sidebar ul.children li, .page-template-default .container #content .sidebar ul.children li {
+.container #content .sidebar ul.children li {
   text-transform: none;
   font-size: 11px;
   margin-bottom: 0;
 }
-.page-template .container #content .main, .page-template-default .container #content .main {
+.container #content .main {
   padding-top: 10px;
 }
-.page-template .container #content .main h1, .page-template-default .container #content .main h1 {
+.container #content .main h1 {
   margin: 0 0 10px 0;
 }
-.page-template .container #content .main h2, .page-template-default .container #content .main h2 {
+.container #content .main h2 {
   margin: 0 0 10px;
 }
-.page-template .container #content .main .situations_list, .page-template-default .container #content .main .situations_list {
+.container #content .main .situations_list {
   -moz-column-count: 2;
   width: 350px;
 }
-.page-template .container #content .situation h2, .page-template-default .container #content .situation h2 {
+.container #content .situation h2 {
   color: #000;
   background: #FFCC00;
   font-size: 18px;
   margin: 0;
   padding: 7px 10px;
 }
-.page-template .container #content .situation .wrong,
-.page-template-default .container #content .situation .wrong,
-.page-template .container #content .situation .right,
-.page-template-default .container #content .situation .right {
+.container #content .situation .wrong, .container #content .situation .right {
   padding: 10px;
   border: solid 5px #ff091b;
 }
-.page-template .container #content .situation .wrong span,
-.page-template-default .container #content .situation .wrong span,
-.page-template .container #content .situation .right span,
-.page-template-default .container #content .situation .right span {
+.container #content .situation .wrong span, .container #content .situation .right span {
   font-weight: bold;
   margin-right: 10px;
   color: #ff091b;
   display: inline;
 }
-.page-template .container #content .situation .wrong p,
-.page-template-default .container #content .situation .wrong p,
-.page-template .container #content .situation .right p,
-.page-template-default .container #content .situation .right p {
+.container #content .situation .wrong p, .container #content .situation .right p {
   display: inline;
   font-size: 14px;
 }
-.page-template .container #content .situation .right, .page-template-default .container #content .situation .right {
+.container #content .situation .right {
   border-color: #009900;
 }
-.page-template .container #content .situation .right span, .page-template-default .container #content .situation .right span {
+.container #content .situation .right span {
   color: #009900;
 }
-.page-template .container #content .comments h3,
-.page-template-default .container #content .comments h3,
-.page-template .container #content .wpcf7 h3,
-.page-template-default .container #content .wpcf7 h3 {
+.container #content .comments h3, .container #content .wpcf7 h3 {
   border-bottom: solid 1px #000;
 }
-.page-template .container #content .comments .commentlist,
-.page-template-default .container #content .comments .commentlist,
-.page-template .container #content .wpcf7 .commentlist,
-.page-template-default .container #content .wpcf7 .commentlist {
+.container #content .comments .commentlist, .container #content .wpcf7 .commentlist {
   padding-left: 0;
 }
-.page-template .container #content .comments .commentlist li,
-.page-template-default .container #content .comments .commentlist li,
-.page-template .container #content .wpcf7 .commentlist li,
-.page-template-default .container #content .wpcf7 .commentlist li {
+.container #content .comments .commentlist li, .container #content .wpcf7 .commentlist li {
   margin-top: 15px;
 }
-.page-template .container #content .comments .commentlist p,
-.page-template-default .container #content .comments .commentlist p,
-.page-template .container #content .wpcf7 .commentlist p,
-.page-template-default .container #content .wpcf7 .commentlist p,
-.page-template .container #content .comments .commentlist cite,
-.page-template-default .container #content .comments .commentlist cite,
-.page-template .container #content .wpcf7 .commentlist cite,
-.page-template-default .container #content .wpcf7 .commentlist cite {
+.container #content .comments .commentlist p,
+.container #content .wpcf7 .commentlist p,
+.container #content .comments .commentlist cite,
+.container #content .wpcf7 .commentlist cite {
   font-size: 16px;
   margin: 3px 0;
 }
-.page-template .container #content .comments fieldset,
-.page-template-default .container #content .comments fieldset,
-.page-template .container #content .wpcf7 fieldset,
-.page-template-default .container #content .wpcf7 fieldset {
+.container #content .comments fieldset, .container #content .wpcf7 fieldset {
   border-radius: 10px;
   margin-bottom: 15px;
 }
-.page-template .container #content .comments legend,
-.page-template-default .container #content .comments legend,
-.page-template .container #content .wpcf7 legend,
-.page-template-default .container #content .wpcf7 legend {
+.container #content .comments legend, .container #content .wpcf7 legend {
   font-style: 20px;
   font-weight: bold;
   color: #333;
 }
-.page-template .container #content .comments #reply-title,
-.page-template-default .container #content .comments #reply-title,
-.page-template .container #content .wpcf7 #reply-title,
-.page-template-default .container #content .wpcf7 #reply-title {
+.container #content .comments #reply-title, .container #content .wpcf7 #reply-title {
   display: none;
 }
-.page-template .container #content .comments label,
-.page-template-default .container #content .comments label,
-.page-template .container #content .wpcf7 label,
-.page-template-default .container #content .wpcf7 label {
+.container #content .comments label, .container #content .wpcf7 label {
   font-weight: bold;
 }
-.page-template .container #content .comments input,
-.page-template-default .container #content .comments input,
-.page-template .container #content .wpcf7 input,
-.page-template-default .container #content .wpcf7 input,
-.page-template .container #content .comments textarea,
-.page-template-default .container #content .comments textarea,
-.page-template .container #content .wpcf7 textarea,
-.page-template-default .container #content .wpcf7 textarea {
+.container #content .comments input,
+.container #content .wpcf7 input,
+.container #content .comments textarea,
+.container #content .wpcf7 textarea {
   width: 500px;
   border-radius: 5px;
   border: 1px solid #333;
   padding: 3px;
 }
-.page-template .container #content .comments input[type="submit"],
-.page-template-default .container #content .comments input[type="submit"],
-.page-template .container #content .wpcf7 input[type="submit"],
-.page-template-default .container #content .wpcf7 input[type="submit"] {
+.container #content .comments input[type="submit"], .container #content .wpcf7 input[type="submit"] {
   width: 100px;
   border: 0;
 }
-.page-template .footer, .page-template-default .footer {
+.footer {
   font-size: 9px;
   border-top: 3px solid #000;
 }
-.page-template .footer .footer_nav,
-.page-template-default .footer .footer_nav,
-.page-template .footer .copyright,
-.page-template-default .footer .copyright {
+.footer .footer_nav, .footer .copyright {
   border-bottom: 1px solid #ccc;
 }
-.page-template .footer .footer_nav, .page-template-default .footer .footer_nav {
+.footer .footer_nav {
   padding-bottom: 2px;
 }
-.page-template .footer .footer_nav ul, .page-template-default .footer .footer_nav ul {
+.footer .footer_nav ul {
   list-style-type: none;
   padding: 0;
   margin: 5px 0;
 }
-.page-template .footer .footer_nav ul li, .page-template-default .footer .footer_nav ul li {
+.footer .footer_nav ul li {
   display: inline;
   float: left;
   border-left: 1px solid #000;
   text-transform: uppercase;
   font-weight: bold;
 }
-.page-template .footer .footer_nav ul li:first-child, .page-template-default .footer .footer_nav ul li:first-child {
+.footer .footer_nav ul li:first-child {
   border: 0;
   padding-left: 0;
 }
-.page-template .footer .footer_nav ul li a,
-.page-template-default .footer .footer_nav ul li a,
-.page-template .footer .footer_nav ul li a:visited,
-.page-template-default .footer .footer_nav ul li a:visited {
+.footer .footer_nav ul li a, .footer .footer_nav ul li a:visited {
   color: #000;
   padding: 0 5px;
 }
-.page-template .footer .copyright p, .page-template-default .footer .copyright p {
+.footer .copyright p {
   font-size: 9px;
   padding: 0;
   margin: 2px 0 3px 3px;
