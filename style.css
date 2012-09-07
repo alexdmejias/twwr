@@ -316,6 +316,10 @@ a {
 a:hover {
   color: #ff091b;
 }
+html, body {
+  margin: 0;
+  height: 100%;
+}
 .page-template h1:hover, .page-template-default h1:hover {
   color: #ff091b;
 }
@@ -542,6 +546,7 @@ a:hover {
 }
 .home #front-page {
   background: url("IMG/pole.jpg") repeat-y scroll 368px center #548acc;
+  height: 100%;
 }
 .home #front-page h1 {
   font-size: 18px;
