@@ -11,8 +11,9 @@ if ( is_admin() ) {
 }
 
 //lsit situations for /situations page
-function list_all_categories(){
-	$pages = get_pages('parent=2&child_of=2&sort_column=menu_order&title_li=');
+function list_all_categories($atts){
+	extract(shortcode_atts(array('id'=>''), $atts));
+	$pages = get_pages('parent='.$id.'&child_of='.$id.'&sort_column=menu_order&title_li=');
 	$list='<ul class="situations_list">';
 	foreach ($pages as $page) {
 		$var = get_post_meta($page->ID,'aka');
