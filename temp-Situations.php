@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Situations
+ * Template Name: 2-Situations
  *
  * Shows all the situations
  */
@@ -24,6 +24,7 @@
 							<?php while(have_posts()):the_post(); ?>
 								<?php
 									the_content('');
+									echo do_shortcode('[list_situations]');
 									//the list of situations comes from functions.php
 								?>
 							<?php endwhile; ?>

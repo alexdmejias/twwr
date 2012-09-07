@@ -11,7 +11,7 @@ if ( is_admin() ) {
 }
 
 //lsit situations for /situations page
-function list_situations_func(){
+function list_all_categories(){
 	$pages = get_pages('parent=2&child_of=2&sort_column=menu_order&title_li=');
 	$list='<ul class="situations_list">';
 	foreach ($pages as $page) {
@@ -26,7 +26,7 @@ function list_situations_func(){
 }
 
 //list categories of situations shortcode for the /situations/x/ page
-function list_categories_func(){
+function list_situations(){
 	$page_id= get_the_id();
 	$pages = get_pages('parent='.$page_id.'&child_of='.$page_id.'&sort_column=menu_order&title_li=');
 	$list='<ul class="categories_list">';
@@ -43,6 +43,7 @@ function list_categories_func(){
 	}
 	$list.= '</ul>';
 	return $list;
+	echo $list;
 }
 
 //shortcode to add the .wrong class
@@ -79,8 +80,8 @@ function add_plugin($plugin_array) {
 
 // register the shortcodes
 function register_shortcodes(){
-	add_shortcode('list_situations','list_situations_func');
-	add_shortcode('list_categories','list_categories_func');
+	add_shortcode('list_all_categories','list_all_categories');
+	add_shortcode('list_situations','list_situations');
 	add_shortcode('wrong','wrong');
 	add_shortcode('right','right');
 }
