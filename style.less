@@ -21,6 +21,7 @@ License URI:
 @r:#FF091B;
 @g:#009900;
 @dark-g:#065506;
+@l-g:#00FF33;
 ////////////////////////////GLOBALS//////////////////////////////////////
 body{background:#fff}
 ul{
@@ -35,6 +36,7 @@ p{
 }
 .r{color:@r}
 .g{color:@g}
+.l-g{color:@l-g}
 a{text-decoration:none}
 a{color:#000;}
 a:hover{color:@r}
@@ -191,7 +193,7 @@ a:hover{color:@r}
 		font-size: 9px;
 		border-top:3px solid #000;
 		.footer_nav,.copyright{
-			border-bottom:2px solid #ccc;
+			border-bottom:1px solid #ccc;
 		}
 
 		.footer_nav{
@@ -235,6 +237,9 @@ a:hover{color:@r}
 .home{
 	background:@light-blue;
 	#front-page{
+		h1{
+			font-size: 18px;
+		}
 		.left{
 			background:@light-blue url('IMG/pole.jpg') repeat-y 96% center;
 			ul{
@@ -243,8 +248,8 @@ a:hover{color:@r}
 			}
 			li{
 				background:url('IMG/empty-sign.png') no-repeat 96% center;
-				margin:10px;
-				padding:6px;
+				margin:9px;
+				padding:8px;
 			}
 			a{
 				font-size: 22px;
@@ -260,6 +265,32 @@ a:hover{color:@r}
 	}
 	.footer{
 		border:0;
+		.footer_nav{
+			padding-bottom: 2px;
+			ul{
+				border-top:1px solid #ccc;
+				list-style-type: none;
+				padding:2px 0 0 0;
+				margin:5px 0;
+				li{
+					display: inline;
+					float: left;
+					border-left:1px solid #000;
+					// font-size: 9px;
+					text-transform: uppercase;
+					font-weight: bold;
+					&:first-child{
+						border:0;
+						padding-left:0;
+					}
+					a,a:visited{
+						color:#333;
+						text-decoration: underline;
+						padding:0 5px;
+					}
+				}
+			}
+		}
 	}
 }
 
