@@ -1,8 +1,8 @@
 <?php get_header('home'); ?>
 <body <?php body_class(); ?>>
-	<div class="container">
+	<div class="container" id="front-page">
 		<div class="row">
-			<section id="front-page" class="span40">
+			<section class="span40">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/IMG/home-header-bigblue2.jpg" />
 				<div class="row">
 					<div class="span22 left">

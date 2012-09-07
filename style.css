@@ -540,11 +540,14 @@ a:hover {
 .home {
   background: #548acc;
 }
+.home #front-page {
+  background: url("IMG/pole.jpg") repeat-y scroll 368px center #548acc;
+}
 .home #front-page h1 {
   font-size: 18px;
 }
 .home #front-page .left {
-  background: #548acc url('IMG/pole.jpg') repeat-y 96% center;
+  background: #548acc url('IMG/pole.jpg') repeat-y 368px center;
 }
 .home #front-page .left ul {
   padding-left: 112px;
