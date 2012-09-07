@@ -43,7 +43,7 @@ function list_situations(){
 	}
 	$list.= '</ul>';
 	return $list;
-	echo $list;
+	// echo $list;
 }
 
 //shortcode to add the .wrong class
