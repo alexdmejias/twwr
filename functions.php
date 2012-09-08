@@ -125,11 +125,11 @@ function change_comment_form_defaults($default) {
 
 
 	$fields =  array(
-		'author' => '<p class="comment-form-author"><label for="author">' . 'Name [your name, class, group or organization]' . '</label> ' . ( $req ? '<span class="required">*:</span>' : ':' ) .
+		'author' => '<p class="comment-form-author"><label for="author">' . __('Name','domainreference') .'[your name, class, group or organization]' . '</label> ' . ( $req ? '<span class="required">*:</span>' : ':' ) .
 		            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
-		'email'  => '<p class="comment-form-email"><label for="email">' . 'Email Address [for notification only, NEVER printed on the site]'. '</label> ' . ( $req ? '<span class="required">*:</span>' : ':' ) .
+		'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ).'[for notification only, NEVER printed on the site]'. '</label> ' . ( $req ? '<span class="required">*:</span>' : ':' ) .
 		            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
-		'location'  => '<p class="comment-form-location"><label for="location">' .'Location [City and State]:'. '</label> '.
+		'location'  => '<p class="comment-form-location"><label for="location">' . __( 'Location', 'domainreference' ).'[City and State]:'. '</label> '.
 		            '<input id="location" name="location" type="text" size="30"' . ' /></p>',
 	);
 
@@ -138,7 +138,7 @@ function change_comment_form_defaults($default) {
 		'fields'=>$fields,
 		'label_submit'=>'Submit',
 		'logged_in_as'=>'<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
-		'comment_field'=>'<p class="comment-form-comment"><label for="comment">' . _x( 'Add Your Comments Here:', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+		'comment_field'=>'<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
 		'comment_notes_before'=>'<p>* required fields</p>',
 		'title_reply'=>'',
 		'title_reply_to'=>'',
