@@ -12,11 +12,20 @@
 	
 	<h3><?php comments_number('No Comments', 'One Comment', 'Comments' );?></h3>
 
+	<div class="navigation">
+		<div class="next-posts"><?php previous_comments_link() ?></div>
+		<div class="prev-posts"><?php next_comments_link() ?></div>
+	</div>
+
 	<ul class="commentlist">
 		<?php //comment layout is in functions.php ?>
 		<?php wp_list_comments('callback=comment_layout'); ?>
 	</ul>
 
+	<div class="navigation">
+		<div class="next-posts"><?php previous_comments_link() ?></div>
+		<div class="prev-posts"><?php next_comments_link() ?></div>
+	</div>
 	
  <?php else : // this is displayed if there are no comments so far ?>
 
@@ -33,13 +42,9 @@
 <?php if ( comments_open() ) : ?>
 <?php //comment form is in functions.php ?>
 <?php 
-	echo '<form>'.
-		'<fieldset class="span26"><legend>Comments Form</legend>';
 	comment_form();
-	echo '</fieldset>';
 	// commented out until i find out what it means
 	// do_action('comment_form', $post->ID);
-	echo '</form>';
 ?>
 <?php endif; ?>
 
