@@ -165,3 +165,26 @@ function save_comment_meta_data( $comment_id ) {
 // tut is here http://wp.tutsplus.com/tutorials/plugins/how-to-create-custom-wordpress-writemeta-boxes/
 
 
+
+
+add_action( 'add_meta_boxes', 'location_meta' );  
+function location_meta() {
+    add_meta_box( 'location_meta_id', 'Location of the Comment Author', 'location_meta_call', 'comment', 'normal', 'high' );
+}
+
+function location_meta_call(){
+    echo get_comment_ID();
+    $location = get_comment_meta(get_comment_ID(),'location', true);
+ 	?>
+ 	<label for="location">Location:</label>
+ 	<input type="text" name="location_meta_box_text"  value="<?php echo $location ?>" id="location_meta_box_text" />
+ 	<?php
+}
+
+add_filter('comment_save_pre','location_save');
+function location_save(){
+	$id = get_comment_ID();
+	$text = $_POST['location_meta_box_text'];
+	update_comment_meta($id,'location','www');
+}
+
