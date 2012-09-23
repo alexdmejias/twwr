@@ -17,9 +17,10 @@ function list_all_categories($atts){
 	$list='<ul class="situations_list">';
 	foreach ($pages as $page) {
 		$var = get_post_meta($page->ID,'aka');
+		$count = count($var);
 		$list.= '<li><a href="'.
 				get_permalink($page->ID).'" alt="">'.
-				($var[0]!=''? $var[0]:$page->post_title).
+				($count>0 && $var[0]!=''? $var[0]:$page->post_title).
 				'</a></li>';
 	}
 	$list.= '</ul>';
@@ -33,11 +34,13 @@ function list_situations(){
 	$list='<ul class="categories_list">';
 	foreach ($pages as $page) {
 		$var = get_post_meta($page->ID,'aka');
+		$count = count($var);
 		$number_of_comments = get_comments_number($page->ID);
 		$list.= '<ul><li>Situation: '.
 				'<a class="situation" href="'.
 				get_permalink($page->ID).'" alt="">'.
-				($var[0]!=''? $var[0]:$page->post_title).
+				($count>0 && $var[0]!=''? $var[0]:$page->post_title).
+
 				'</a></li>'.
 				'<li class="comment_count">Comments: '.$number_of_comments.'</li>'.
 				'</li></ul>';
@@ -120,9 +123,11 @@ function comment_layout ( $comment, $args, $depth ) {
 add_filter( 'comment_form_defaults',	'change_comment_form_defaults');
 
 function change_comment_form_defaults($default) {
+	global $user_login;
+	get_currentuserinfo();
 	$commenter = wp_get_current_commenter();
 	$req = get_option('require_name_email ');
-
+	$aria_req = ( $req ? " aria-required='true'" : '' );
 
 	$fields =  array(
 		'author' => '<p class="comment-form-author"><label for="author">' . __('Name','domainreference') .'[your name, class, group or organization]' . '</label> ' . ( $req ? '<span class="required">*:</span>' : ':' ) .
@@ -137,7 +142,7 @@ function change_comment_form_defaults($default) {
 	$default=array(
 		'fields'=>$fields,
 		'label_submit'=>'Submit',
-		'logged_in_as'=>'<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
+		'logged_in_as'=>'<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), admin_url( 'profile.php' ), $user_login, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
 		'comment_field'=>'<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
 		'comment_notes_before'=>'<fieldset class="span26"><legend>Comments Form</legend><p>* required fields</p>',
 		'comment_notes_after'=>'</fieldset>',
@@ -167,13 +172,12 @@ function save_comment_meta_data( $comment_id ) {
 
 
 
-add_action( 'add_meta_boxes', 'location_meta' );  
+add_action( 'add_meta_boxes', 'location_meta' );
 function location_meta() {
     add_meta_box( 'location_meta_id', 'Location of the Comment Author', 'location_meta_call', 'comment', 'normal', 'high' );
 }
 
 function location_meta_call(){
-    echo get_comment_ID();
     $location = get_comment_meta(get_comment_ID(),'location', true);
  	?>
  	<label for="location">Location:</label>
@@ -182,9 +186,17 @@ function location_meta_call(){
 }
 
 add_filter('comment_save_pre','location_save');
-function location_save(){
+function location_save($comment_content){
+	global $wpdb;
+
 	$id = get_comment_ID();
 	$text = $_POST['location_meta_box_text'];
-	update_comment_meta($id,'location','www');
+	$data = compact('text');
+	$rval= $wpdb ->update($wpdb->comments,$data,compact('id'));
+	
+	update_comment_meta($id,'location',$text);
+
+	return $comment_content;
+
 }
 
